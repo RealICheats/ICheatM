@@ -965,7 +965,7 @@ game.Players.LocalPlayer.CharacterAdded:Connect(function()
 end)
 
 local GameTab = Window:CreateTab("Game", 4483362458)
-local Prox = AimTab:CreateSection("Proxys")
+local Prox = GameTab:CreateSection("Proxys")
 
 local enabled = false
 local originalDurations = {}  -- Saves original HoldDuration for each prompt
