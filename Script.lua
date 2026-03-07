@@ -1,4 +1,4 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Rayfield = loadstring(game:HttpGet('https://pastebin.com/raw/SnJyupp7'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "ICheat",
