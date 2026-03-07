@@ -1039,3 +1039,15 @@ local EHB = ExtraTab:CreateButton({
 loadstring(game:HttpGet("https://pastebin.com/raw/c2QAXbAZ"))()
    end,
 })
+local egb = ExtraTab:CreateButton({
+   Name = "Gravel",
+   Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/8MAJy9Mr", true))()
+   end,
+})
+local infyeild = ExtraTab:CreateButton({
+   Name = "Inf Yeild",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+   end,
+})
