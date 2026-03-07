@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local on = true  -- Change this to false to stop printing
 
-while shouldPrint do
+while on do
     loadstring(game:HttpGet("https://pastebin.com/raw/NmZAr6zi", true))()
     task.wait(1)  -- Waits 1 second
 end
