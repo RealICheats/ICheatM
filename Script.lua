@@ -1051,3 +1051,10 @@ local infyeild = ExtraTab:CreateButton({
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
    end,
 })
+
+local encod = ExtraTab:CreateButton({
+   Name = "Encoder",
+   Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/kD1jbXgS", true))()
+   end,
+})
